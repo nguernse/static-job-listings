@@ -1,0 +1,13 @@
+@use "../../assets/styles/variables";
+
+.Card {
+  background-color: white;
+  border-radius: variables.$radius-small;
+  box-shadow: 2px 2px 2px rgba(variables.$color-primary, 0.1);
+  border-left: 4px solid transparent;
+  padding: variables.$spacing-medium;
+}
+
+.active {
+  border-color: variables.$color-primary;
+}
