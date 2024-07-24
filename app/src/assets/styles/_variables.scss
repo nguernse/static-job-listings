@@ -1,5 +1,35 @@
-$text-base: 16px;
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+// TYPOGRAPHY
+$text-base: 15px;
 $text-small: 0.75rem;
 $text-medium: 1.25rem;
 $text-large: 2rem;
 $text-xl: 3rem;
+$font-weight-normal: 500;
+$font-weight-heavy: 700;
+$font-family-main: "League Spartan", sans-serif;
+
+// COLORS
+$color-primary: hsl(180, 29%, 50%);
+$color-white: white;
+$color-gray: hsl(180, 8%, 52%);
+$color-gray-light: hsl(180, 31%, 95%);
+$color-gray-lightest: hsl(180, 52%, 96%);
+$color-gray-dark: hsl(180, 14%, 20%);
+
+// BORDERS
+$radius-small: 0.25rem;
+$radius-base: 1rem;
+$radius-medium: 1.5rem;
+$radius-large: 2rem;
+
+// SPACING
+$spacing-small: 0.25rem;
+$spacing-base: 1rem;
+$spacing-medium: 1.25rem;
+$spacing-large: 1.5rem;
+
+// Screens
+$screen-mobile: 375px;
+$screen-desktop: 1440px;
