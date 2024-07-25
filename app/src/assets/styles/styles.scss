@@ -4,6 +4,14 @@
 body {
   font-size: $text-base;
   font-family: $font-family-main;
-  font-weight: $font-weight-normal;
   background-color: $color-gray-light;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
 }

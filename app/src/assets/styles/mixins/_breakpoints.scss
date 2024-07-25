@@ -1,0 +1,25 @@
+@use "../variables";
+
+$breakpoints: (
+  mobile: variables.$screen-mobile,
+  tablet: variables.$screen-tablet,
+  desktop: variables.$screen-desktop,
+);
+
+@mixin media-breakpoint-up($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($min, $max) {
+  @media (min-width: map-get($breakpoints, $min)) and (max-width: map-get($breakpoints, $max)) {
+    @content;
+  }
+}
