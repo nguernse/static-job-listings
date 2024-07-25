@@ -1,0 +1,112 @@
+@use "../../assets/styles/variables";
+@use "../../assets/styles/mixins/breakpoints";
+
+.JobPosting {
+  margin-bottom: 2rem;
+}
+
+.JobPostingBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.JobLogo {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+}
+
+.JobDescription {
+}
+
+.DescriptionHeader {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+
+  & > *:not(:last-child) {
+    margin-right: variables.$spacing-small;
+  }
+
+  .Company {
+    color: variables.$color-primary;
+    margin-right: variables.$spacing-base
+  }
+
+}
+
+.DescriptionTitle {
+  color: variables.$color-gray-dark;
+  font-weight: variables.$font-weight-heavy;
+  font-size: variables.$text-medium;
+  margin: variables.$spacing-small 0;
+}
+
+.DescritionFooter {
+  color: variables.$color-gray;
+
+  & > span:not(:first-child):before {
+    content: '•';
+    margin-left: variables.$spacing-extra-small;
+    margin-right: variables.$spacing-extra-small;
+  }
+}
+
+.JobFilterTags {
+  display: flex;
+  margin-left: auto;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(gray, 0.25);
+  padding-top: 1rem;
+  margin-top: 1rem;  
+
+  button {
+    cursor: pointer;
+    border: none;
+    padding: variables.$spacing-small;
+    border-radius: variables.$spacing-extra-small;
+    margin-right: variables.$spacing-extra-small;
+    color: variables.$color-primary;
+    font-weight: variables.$font-weight-normal;
+
+    &.active,
+    &:hover {
+      background-color: variables.$color-primary;
+      color: variables.$color-white;
+    }
+  }
+}
+
+@include breakpoints.media-breakpoint-up("tablet") {
+  .JobPostingBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .JobLogo {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 75px;
+    width: 75px;
+    margin-right: variables.$spacing-base;
+  }
+  
+  .JobFilterTags {
+    display: flex;
+    margin-left: auto;
+    gap: 0;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .DescriptionHeader {
+    margin-top: 0;
+  }
+}
