@@ -1,0 +1,74 @@
+@use "../../assets/styles/variables";
+@use "../../assets/styles/mixins//breakpoints";
+
+.JobFilterBar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: variables.$screen-tablet;
+  margin-bottom: 4rem;
+}
+
+.JobFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.JobFilterTag {
+  display: flex;
+  align-items: center;
+  background-color: variables.$color-gray-light;
+  color: variables.$color-primary;
+  border-top-left-radius: variables.$radius-small;
+  border-bottom-left-radius: variables.$radius-small;
+
+  span {
+    padding: variables.$spacing-small;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
+    border-top-right-radius: variables.$radius-small;
+    border-bottom-right-radius: variables.$radius-small; 
+    padding: 0.5rem;
+    
+    &:hover {
+      background-color: variables.$color-gray-dark;
+      color: variables.$color-white;
+      font-weight: variables.$font-weight-normal;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.JobClear {
+  cursor: pointer;
+  margin-left: auto;
+  border: none;
+  color: variables.$color-gray;
+  font-weight: variables.$font-weight-normal;
+  background-color: transparent;
+  padding: variables.$spacing-small;
+
+  &:hover {
+    color: variables.$color-primary;
+    text-decoration: underline;
+  }
+}
+
+@include breakpoints.media-breakpoint-up("tablet") {
+  .JobFilterBar {
+    margin-bottom: 2rem;
+  }
+}

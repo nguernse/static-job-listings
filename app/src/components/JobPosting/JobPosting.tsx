@@ -8,9 +8,10 @@ import { useMemo } from "react";
 
 type Props = {
   job: Job;
+  onFilter: (filter: string) => void;
 };
 
-export default function JobPosting({ job }: Props) {
+export default function JobPosting({ job, onFilter }: Props) {
   const jobFilterTags = useMemo(() => {
     // flatten the job filter tags
     return [job.role, job.level, ...job.languages, ...job.tools];
@@ -47,7 +48,11 @@ export default function JobPosting({ job }: Props) {
 
         <div className={styles.JobFilterTags}>
           {jobFilterTags.map((tag) => (
-            <button data-testid="job-filter-tag" key={tag}>
+            <button
+              data-testid="job-filter-tag"
+              key={tag}
+              onClick={() => onFilter(tag)}
+            >
               {tag}
             </button>
           ))}
