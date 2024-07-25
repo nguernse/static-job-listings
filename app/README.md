@@ -39,3 +39,9 @@ export default {
 - [Vitest](https://vitest.dev/guide)
 - [Vitest React Testing Library](https://www.robinwieruch.de/vitest-react-testing-library/)
 - [Testing React Apps](https://github.com/bonnie/udemy-TESTING-LIBRARY/tree/main)
+
+# Deploying
+
+`npm run deploy`
+
+This [vite deploy](https://github.com/ErickKS/vite-deploy) repository was helpful.
