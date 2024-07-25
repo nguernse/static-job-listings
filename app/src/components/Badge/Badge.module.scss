@@ -1,0 +1,19 @@
+@use "../../assets/styles/variables";
+
+.Badge {
+  border-radius: variables.$radius-base;
+  padding: variables.$spacing-small;
+  font-size: variables.$text-small;
+  padding: 0.25rem 0.5rem;
+  font-weight: variables.$font-weight-heavy;
+}
+
+.primary {
+  background-color: variables.$color-primary;
+  color: variables.$color-white;
+}
+
+.dark {
+  background-color: variables.$color-gray-dark;
+  color: variables.$color-white;
+}
