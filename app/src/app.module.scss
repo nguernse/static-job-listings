@@ -1,0 +1,16 @@
+@use "./assets/styles/variables";
+
+.Main {
+  position: relative;
+  padding: 1rem;
+  padding-top: 5rem;
+
+  &[data-filter='false'] {
+    padding-top: 10rem;
+  }
+  
+  section {
+    max-width: variables.$screen-tablet;
+    margin: 0 auto;
+  }
+}
